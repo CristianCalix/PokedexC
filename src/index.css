@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+
+body {
+    height: 100%;
+    min-height: 100vh;
+    @apply bg-gradient-to-tr from-yellow-50 to-red-100;
+}
+
+#root {
+    @apply flex flex-col min-h-screen;
+}
+
+.navigation ul {
+    @apply bg-white shadow-md p-4 flex justify-between items-center;
+}
+
+.navigation ul li a{
+    @apply text-2xl text-gray-800 hover:text-black;
+}
+
+
+.navigation ul li a:hover {
+    @apply font-bold;
+}
+
+
+footer {
+    @apply bg-black text-white text-center p-4;
+}
+
+.pokemonList{
+    @apply grid grid-cols-2 md:grid-cols-5 gap-6 p-4;
+}
+
+.pokemonListItem{
+    @apply flex flex-col gap-2 min-w-60  border-0 rounded-2xl p-1 justify-between bg-gray-50/50;
+}
+
+
+.pokemonListItem div{
+    @apply flex flex-col p-2 bg-white text-gray-900 text-center text-lg gap-2;
+}
+
+.pokemonListItem img{
+    @apply object-cover;
+}
+
+.pokemonListItem button{
+    @apply text-gray-500 font-bold p-2 rounded-lg;
+}
+.pokemonListItem button:hover{
+    @apply hover:bg-red-600 text-white transition-all cursor-pointer duration-200;
+}
+
+@import "./styles/paging.css";
